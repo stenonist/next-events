@@ -5,6 +5,9 @@ export default authMiddleware({
     '/',
     '/events:id',
     '/assets/images/logo.svg',
+    '/favicon.ico',
+    '/assets/images/hero.png',
+    '/assets/images/dotted-pattern.png',
     '/api/webhook/clerk',
     '/api/webhook/stripe',
     '/api/uploadthing'
