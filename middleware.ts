@@ -8,13 +8,13 @@ export default authMiddleware({
     '/favicon.ico',
     '/assets/images/hero.png',
     '/assets/images/dotted-pattern.png',
-    '/api/webhook/clerk',
-    '/api/webhook/stripe',
+    '/api/webhooks/clerk',
+    '/api/webhooks/stripe',
     '/api/uploadthing'
   ],
   ignoredRoutes:[
-    '/api/webhook/clerk',
-    '/api/webhook/stripe',
+    '/api/webhooks/clerk',
+    '/api/webhooks/stripe',
     '/api/uploadthing'
   ]
 });
