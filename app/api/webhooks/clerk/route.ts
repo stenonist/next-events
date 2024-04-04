@@ -74,12 +74,13 @@ export async function POST(req: Request) {
           userId: newUser._id
         }
       })
+    }else{
+      console.log("no user");
+      
     }
 
     return NextResponse.json({ message: 'OK', user: newUser })
-  }
-
-  if (eventType === 'user.updated') {
+  }else if (eventType === 'user.updated') {
     const {id, image_url, first_name, last_name, username } = evt.data
 
     const user = {
@@ -92,16 +93,15 @@ export async function POST(req: Request) {
     const updatedUser = await updateUser(id, user)
 
     return NextResponse.json({ message: 'OK', user: updatedUser })
-  }
-
-  if (eventType === 'user.deleted') {
+  }else if (eventType === 'user.deleted') {
     const { id } = evt.data
 
     const deletedUser = await deleteUser(id!)
 
     return NextResponse.json({ message: 'OK', user: deletedUser })
+  }else{
+    return new Response('', { status: 200 })
   }
  
-  return new Response('', { status: 200 })
 }
  
