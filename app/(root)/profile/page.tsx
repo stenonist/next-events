@@ -36,7 +36,7 @@ const ProfilePage = async ({ searchParams }: SearchParamProps) => {
 
       <section className="wrapper my-8">
         <Collection 
-          data={orderedEvents}
+          data={orderedEvents?.data}
           emptyTitle="No event tickets purchased yet"
           emptyStateSubtext="No worries - plenty of exciting events to explore!"
           collectionType="My_Tickets"
@@ -60,6 +60,7 @@ const ProfilePage = async ({ searchParams }: SearchParamProps) => {
       </section>
 
       <section className="wrapper my-8">
+        
         <Collection 
           data={organizedEvents?.data}
           emptyTitle="No events have been created yet"
